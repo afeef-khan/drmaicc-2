@@ -299,23 +299,22 @@
             overflow: hidden;
             background: linear-gradient(135deg, #d9e4d7 0%, #c5d8c2 50%, #a8c5a4 100%);
             animation: fadeIn 1.2s ease both;
-        }
-
-        .hero-right::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            display: flex;
+            align-items: stretch;
         }
 
         .hero-img-placeholder {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-img-placeholder>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
         }
 
         .hero-leaf {
@@ -1139,7 +1138,8 @@
             }
 
             .hero-right {
-                min-height: 300px;
+                min-height: 50vh;
+                max-height: 400px;
             }
 
             .hero-left {
@@ -1244,7 +1244,7 @@
         </div>
         <div class="hero-right">
             <div class="hero-img-placeholder">
-                <svg class="hero-leaf" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg class="hero-leaf" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M100 10 C140 30, 180 70, 180 120 C180 160, 145 185, 100 190 C55 185, 20 160, 20 120 C20 70, 60 30, 100 10Z"
                         fill="white" opacity="0.3" />
@@ -1253,7 +1253,8 @@
                     <path d="M100 80 C80 90, 60 105, 52 130" stroke="white" stroke-width="1" opacity="0.3" />
                     <path d="M100 100 C115 105, 138 115, 148 138" stroke="white" stroke-width="1" opacity="0.3" />
                     <path d="M100 120 C85 126, 66 136, 60 158" stroke="white" stroke-width="1" opacity="0.3" />
-                </svg>
+                </svg> -->
+                <img src="https://images.pexels.com/photos/9951388/pexels-photo-9951388.jpeg" alt="">
             </div>
             <div class="hero-circles">
                 <div class="hero-pill">
