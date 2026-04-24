@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mai Al Shamsi Integrated Care Center | Abu Dhabi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ivory: #F9F6F0;
+            --cream: #EDE8DF;
+            --sage: #8A9E84;
+            --sage-light: #B8C9B3;
+            --sage-dark: #5C7457;
+            --gold: #C4A35A;
+            --gold-light: #E2C98A;
+            --charcoal: #2C2C2C;
+            --mid: #6B6B6B;
+            --white: #FFFFFF;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--ivory);
+            color: var(--charcoal);
+            font-family: var(--font-body);
+            font-weight: 300;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(249, 246, 240, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(196, 163, 90, 0.15);
+            transition: padding 0.3s;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .nav-logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--sage-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .nav-logo-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--white);
+        }
+
+        .nav-logo-text {
+            line-height: 1.2;
+        }
+
+        .nav-logo-text .brand {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--charcoal);
+            letter-spacing: 0.02em;
+        }
+
+        .nav-logo-text .sub {
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--mid);
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        .nav-cta {
+            background: var(--sage-dark);
+            color: var(--white);
+            padding: 10px 24px;
+            border: none;
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 82px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 60px 80px 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(138, 158, 132, 0.12);
+            border: 1px solid rgba(138, 158, 132, 0.35);
+            border-radius: 2px;
+            padding: 7px 16px;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--sage-dark);
+            font-weight: 500;
+            margin-bottom: 32px;
+            width: fit-content;
+            animation: fadeUp 0.8s ease both;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--sage);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(44px, 5.5vw, 72px);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--charcoal);
+            margin-bottom: 28px;
+            animation: fadeUp 0.8s 0.15s ease both;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--sage-dark);
+        }
+
+        .hero-desc {
+            font-size: 15px;
+            color: var(--mid);
+            max-width: 440px;
+            line-height: 1.8;
+            margin-bottom: 44px;
+            animation: fadeUp 0.8s 0.3s ease both;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.8s 0.45s ease both;
+        }
+
+        .btn-primary {
+            background: var(--sage-dark);
+            color: var(--white);
+            padding: 14px 32px;
+            border: 2px solid var(--sage-dark);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--sage-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--charcoal);
+            padding: 14px 32px;
+            border: 2px solid rgba(44, 44, 44, 0.25);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--sage-dark);
+            color: var(--sage-dark);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 44px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(44, 44, 44, 0.1);
+            animation: fadeUp 0.8s 0.6s ease both;
+        }
+
+        .stat-num {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 300;
+            color: var(--charcoal);
+            line-height: 1;
+        }
+
+        .stat-num span {
+            font-size: 18px;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--mid);
+            margin-top: 4px;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #d9e4d7 0%, #c5d8c2 50%, #a8c5a4 100%);
+            animation: fadeIn 1.2s ease both;
+        }
+
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hero-leaf {
+            width: 200px;
+            height: 200px;
+            opacity: 0.25;
+        }
+
+        .hero-circles {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end;
+        }
+
+        .hero-pill {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 100px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--charcoal);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            animation: slideLeft 0.8s ease both;
+        }
+
+        .hero-pill:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .hero-pill:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .pill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--sage);
+        }
+
+        /* ── MARQUEE ── */
+        .marquee-section {
+            background: var(--sage-dark);
+            padding: 18px 0;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 0;
+            animation: marquee 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .marquee-item {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 400;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-shrink: 0;
+        }
+
+        .marquee-item::after {
+            content: '✦';
+            color: var(--gold-light);
+            font-size: 8px;
+        }
+
+        /* ── ABOUT ── */
+        .about {
+            padding: 120px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-card {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 48px;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.07);
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            background: var(--sage-light);
+            border-radius: 4px;
+            z-index: -1;
+            opacity: 0.35;
+        }
+
+        .about-tag {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .about-quote {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--charcoal);
+            line-height: 1.5;
+            border-left: 3px solid var(--sage);
+            padding-left: 20px;
+            margin: 24px 0;
+        }
+
+        .about-signature {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-style: italic;
+            color: var(--sage-dark);
+            margin-top: 20px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-label::before {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 300;
+            line-height: 1.15;
+            color: var(--charcoal);
+            margin-bottom: 24px;
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--sage-dark);
+        }
+
+        .section-body {
+            font-size: 15px;
+            color: var(--mid);
+            line-height: 1.85;
+        }
+
+        .about-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        .pillar {
+            background: var(--cream);
+            border-radius: 4px;
+            padding: 20px;
+            border-left: 3px solid var(--sage);
+        }
+
+        .pillar-icon {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .pillar-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+        }
+
+        .pillar-text {
+            font-size: 12px;
+            color: var(--mid);
+        }
+
+        /* ── SERVICES ── */
+        .services {
+            padding: 120px 80px;
+            background: var(--charcoal);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 72px;
+        }
+
+        .services-header .section-label {
+            justify-content: center;
+        }
+
+        .services-header .section-label::before {
+            display: none;
+        }
+
+        .services-header .section-title {
+            color: var(--white);
+        }
+
+        .services-header p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.55);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 44px 36px;
+            cursor: pointer;
+            transition: all 0.35s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--sage), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-num {
+            font-family: var(--font-display);
+            font-size: 48px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.08);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .service-icon {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .service-name {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .service-text {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.75;
+        }
+
+        .service-arrow {
+            margin-top: 24px;
+            font-size: 18px;
+            color: var(--sage-light);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .service-arrow {
+            transform: translateX(6px);
+        }
+
+        /* ── PHILOSOPHY ── */
+        .philosophy {
+            padding: 120px 80px;
+            background: var(--cream);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .philosophy-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 28px;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+            position: relative;
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-num {
+            font-family: var(--font-display);
+            font-size: 40px;
+            font-weight: 300;
+            color: rgba(44, 44, 44, 0.1);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 50px;
+            text-align: right;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 6px;
+        }
+
+        .step-text {
+            font-size: 14px;
+            color: var(--mid);
+            line-height: 1.75;
+        }
+
+        /* ── DR MAI BIO ── */
+        .dr-bio {
+            padding: 120px 80px;
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .bio-portrait {
+            background: linear-gradient(160deg, var(--sage-light), var(--sage));
+            border-radius: 4px;
+            aspect-ratio: 3/4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bio-portrait-text {
+            font-family: var(--font-display);
+            font-size: 120px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.15);
+            user-select: none;
+            line-height: 1;
+        }
+
+        .bio-tag {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-radius: 4px;
+            padding: 16px 20px;
+        }
+
+        .bio-tag-name {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        .bio-tag-role {
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            color: var(--sage-dark);
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .bio-content {
+            padding-top: 8px;
+        }
+
+        .bio-certs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 32px;
+            margin-bottom: 36px;
+        }
+
+        .cert-badge {
+            background: var(--cream);
+            border: 1px solid rgba(44, 44, 44, 0.12);
+            border-radius: 2px;
+            padding: 7px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--charcoal);
+            letter-spacing: 0.05em;
+        }
+
+        /* ── CONTACT ── */
+        .contact {
+            padding: 120px 80px;
+            background: var(--sage-dark);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-left {
+            color: var(--white);
+        }
+
+        .contact-left .section-label {
+            color: var(--gold-light);
+        }
+
+        .contact-left .section-label::before {
+            background: var(--gold-light);
+        }
+
+        .contact-left .section-title {
+            color: var(--white);
+        }
+
+        .contact-left p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 44px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-row-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+
+        .contact-row-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        .contact-row-label {
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 2px;
+            font-weight: 500;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 48px;
+        }
+
+        .form-title {
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 400;
+            color: var(--charcoal);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--mid);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(44, 44, 44, 0.15);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 14px;
+            color: var(--charcoal);
+            background: var(--ivory);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--sage);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--sage-dark);
+            color: var(--white);
+            padding: 14px;
+            border: none;
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 8px;
+        }
+
+        .form-submit:hover {
+            background: var(--gold);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--charcoal);
+            padding: 60px 80px 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        footer .brand {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        footer .tagline {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.7;
+            max-width: 260px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--sage);
+            border-color: var(--sage);
+            color: var(--white);
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-col ul a {
+            text-decoration: none;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            transition: color 0.3s;
+        }
+
+        .footer-col ul a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-column: 1 / -1;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ── HOURS BADGE ── */
+        .hours-section {
+            background: var(--cream);
+            padding: 60px 80px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hours-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--charcoal);
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .hours-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .hour-item {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 20px 28px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            min-width: 120px;
+        }
+
+        .hour-day {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .hour-time {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--charcoal);
+        }
+
+        .hour-item.closed {
+            opacity: 0.5;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── MOBILE ── */
+        @media (max-width: 900px) {
+            nav {
+                padding: 16px 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-right {
+                min-height: 300px;
+            }
+
+            .hero-left {
+                padding: 60px 24px;
+            }
+
+            .about,
+            .philosophy,
+            .dr-bio,
+            .contact {
+                grid-template-columns: 1fr;
+                padding: 80px 24px;
+                gap: 48px;
+            }
+
+            .services {
+                padding: 80px 24px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1px;
+            }
+
+            .hours-section {
+                padding: 60px 24px;
+            }
+
+            footer {
+                grid-template-columns: 1fr 1fr;
+                padding: 60px 24px 40px;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                grid-column: 1 / -1;
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .hero-stats {
+                gap: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"
+                        opacity="0" />
+                    <path
+                        d="M12 3 C9 3, 7 5, 7 8 C7 11, 9 13, 12 14 C15 13, 17 11, 17 8 C17 5, 15 3, 12 3Z M10 18 L14 18 L14 21 L10 21Z M11 14 L13 14 L13 18 L11 18Z" />
+                </svg>
+            </div>
+            <div class="nav-logo-text">
+                <div class="brand">Dr. Mai Al Shamsi</div>
+                <div class="sub">Integrated Care Center</div>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#philosophy">Approach</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:+97122222818" class="nav-cta">Book Appointment</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-badge">Biological · Integrative · Functional Medicine</div>
+            <h1>Healing the Root,<br>Not the <em>Symptom</em></h1>
+            <p class="hero-desc">Dr. Mai Al Shamsi Integrated Care Center offers a holistic approach to medicine —
+                balancing Body, Mind &amp; Soul through biological and integrative therapies in Abu Dhabi.</p>
+            <div class="hero-actions">
+                <a href="tel:+97122222818" class="btn-primary">Schedule a Consultation</a>
+                <a href="#services" class="btn-outline">Explore Services</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">15<span>+</span></div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div>
+                    <div class="stat-num">452</div>
+                    <div class="stat-label">Satisfied Patients</div>
+                </div>
+                <div>
+                    <div class="stat-num">20<span>+</span></div>
+                    <div class="stat-label">Unique Services</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-img-placeholder">
+                <svg class="hero-leaf" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M100 10 C140 30, 180 70, 180 120 C180 160, 145 185, 100 190 C55 185, 20 160, 20 120 C20 70, 60 30, 100 10Z"
+                        fill="white" opacity="0.3" />
+                    <path d="M100 10 L100 190" stroke="white" stroke-width="1.5" opacity="0.4" />
+                    <path d="M100 60 C120 70, 145 85, 155 110" stroke="white" stroke-width="1" opacity="0.3" />
+                    <path d="M100 80 C80 90, 60 105, 52 130" stroke="white" stroke-width="1" opacity="0.3" />
+                    <path d="M100 100 C115 105, 138 115, 148 138" stroke="white" stroke-width="1" opacity="0.3" />
+                    <path d="M100 120 C85 126, 66 136, 60 158" stroke="white" stroke-width="1" opacity="0.3" />
+                </svg>
+            </div>
+            <div class="hero-circles">
+                <div class="hero-pill">
+                    <div class="pill-dot"></div> Bio-Functional Medicine
+                </div>
+                <div class="hero-pill">
+                    <div class="pill-dot" style="background:var(--gold)"></div> Holistic Wellbeing
+                </div>
+                <div class="hero-pill">
+                    <div class="pill-dot" style="background:#aaa"></div> Abu Dhabi, UAE
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-item">Biological Dentistry</div>
+            <div class="marquee-item">CranioSacral Therapy</div>
+            <div class="marquee-item">Ozone Therapy</div>
+            <div class="marquee-item">Neurofeedback</div>
+            <div class="marquee-item">Detox Programs</div>
+            <div class="marquee-item">Thermography</div>
+            <div class="marquee-item">Neural Therapy</div>
+            <div class="marquee-item">Functional Medicine</div>
+            <div class="marquee-item">Magnetic Field Therapy</div>
+            <div class="marquee-item">Quantum Detox</div>
+            <div class="marquee-item">Biogeometry</div>
+            <div class="marquee-item">Biological Dentistry</div>
+            <div class="marquee-item">CranioSacral Therapy</div>
+            <div class="marquee-item">Ozone Therapy</div>
+            <div class="marquee-item">Neurofeedback</div>
+            <div class="marquee-item">Detox Programs</div>
+            <div class="marquee-item">Thermography</div>
+            <div class="marquee-item">Neural Therapy</div>
+            <div class="marquee-item">Functional Medicine</div>
+            <div class="marquee-item">Magnetic Field Therapy</div>
+            <div class="marquee-item">Quantum Detox</div>
+            <div class="marquee-item">Biogeometry</div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-visual reveal">
+            <div class="about-card">
+                <div class="about-tag">Our Mission</div>
+                <p style="font-size:14px;color:var(--mid);line-height:1.8;">We are proud to provide alternative
+                    biological medicine integrated with programs that envelope the healing process in a complete cycle
+                    touching:</p>
+                <div class="about-quote">"The Body, The Mind and The Soul — treated as one."</div>
+                <p style="font-size:14px;color:var(--mid);line-height:1.8;margin-top:16px;">Created to be your healing
+                    getaway, the center is set to make you feel welcome from the moment you step in. We aim to see you
+                    glowing with the beautiful life within you.</p>
+                <div class="about-signature">— Dr. Mai Al Shamsi</div>
+            </div>
+        </div>
+        <div class="reveal" style="animation-delay:0.2s">
+            <div class="section-label">About the Center</div>
+            <h2 class="section-title">Integrative Care,<br><em>Redefined</em></h2>
+            <p class="section-body">Dr. Mai Al Shamsi Integrated Care Center is an integrative facility committed to
+                proactive health, improving your present wellbeing, and preventing age-related diseases through a
+                balanced, holistic approach to well aging.<br><br>Rather than suppressing symptoms, we trace each
+                individual's root causes — daily nutrition, food allergies, lifestyle, epigenetics, and environmental
+                factors — to address them at their source.</p>
+            <div class="about-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🌿</div>
+                    <div class="pillar-name">Root Cause Analysis</div>
+                    <div class="pillar-text">Tracing symptoms to their source</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">⚗️</div>
+                    <div class="pillar-name">Bio-Functional Medicine</div>
+                    <div class="pillar-text">Swiss biological medicine protocols</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">🧬</div>
+                    <div class="pillar-name">Epigenetic Assessment</div>
+                    <div class="pillar-text">Personalized genetic insights</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">✨</div>
+                    <div class="pillar-name">Rejuvalife Vitality</div>
+                    <div class="pillar-text">Anti-aging &amp; longevity programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="services-header reveal">
+            <div class="section-label">What We Offer</div>
+            <h2 class="section-title">Our <em>Services</em></h2>
+            <p>A comprehensive suite of integrative therapies designed to restore your body's natural balance and
+                vitality.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-num">01</div>
+                <div class="service-icon">🦷</div>
+                <div class="service-name">Biological Dentistry</div>
+                <p class="service-text">Holistic dental care that treats your oral health as an integral part of your
+                    overall wellbeing, using biocompatible materials.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">02</div>
+                <div class="service-icon">🌬️</div>
+                <div class="service-name">Ozone Therapy</div>
+                <p class="service-text">Medical-grade ozone treatment to boost immune function, detoxify, and stimulate
+                    the body's natural healing mechanisms.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">03</div>
+                <div class="service-icon">🧠</div>
+                <div class="service-name">Neurofeedback Therapy</div>
+                <p class="service-text">Brain training technology to optimize neural function, reduce stress, improve
+                    focus and cognitive performance.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">04</div>
+                <div class="service-icon">🌊</div>
+                <div class="service-name">CranioSacral Therapy</div>
+                <p class="service-text">Gentle, non-invasive bodywork that releases tension in the craniosacral system
+                    to relieve pain and improve mobility.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">05</div>
+                <div class="service-icon">🔬</div>
+                <div class="service-name">Dark Field Microscopy</div>
+                <p class="service-text">Advanced live blood analysis revealing nutritional deficiencies, toxins, and
+                    imbalances invisible to conventional testing.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">06</div>
+                <div class="service-icon">🌡️</div>
+                <div class="service-name">ALFA Thermography</div>
+                <p class="service-text">Non-invasive infrared imaging for early detection of physiological changes and
+                    inflammation patterns in the body.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">07</div>
+                <div class="service-icon">🧲</div>
+                <div class="service-name">Magnetic Field Therapy</div>
+                <p class="service-text">PEMF technology that stimulates cellular regeneration, reduces inflammation and
+                    accelerates natural healing.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">08</div>
+                <div class="service-icon">💧</div>
+                <div class="service-name">Detox &amp; Colon Therapy</div>
+                <p class="service-text">Deep cleansing programs including hydrocolon and ion cleanse therapy to
+                    eliminate toxins and restore gut health.</p>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card reveal">
+                <div class="service-num">09</div>
+                <div class="service-icon">⚡</div>
+                <div class="service-name">Functional Medicine</div>
+                <p class="service-text">Comprehensive bio-regulatory consultations that evaluate and treat the whole
+                    person — not just the disease.</p>
+                <div class="service-arrow">→</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy" id="philosophy">
+        <div class="reveal">
+            <div class="section-label">How We Work</div>
+            <h2 class="section-title">The <em>Integrated</em><br>Care Approach</h2>
+            <p class="section-body" style="margin-bottom:24px;">Instead of looking at symptoms and suppressing them, we
+                take one step back and identify the cause by assessing the reason behind the problem through a
+                comprehensive whole-body evaluation.</p>
+            <a href="tel:+97122222818" class="btn-primary" style="margin-top:16px;">Begin Your Journey</a>
+        </div>
+        <div class="philosophy-steps reveal">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div class="step-content">
+                    <div class="step-title">Comprehensive Assessment</div>
+                    <div class="step-text">We evaluate your daily food intake, food allergies, lifestyle habits,
+                        epigenetic predispositions, and environmental causes through advanced diagnostics.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div class="step-content">
+                    <div class="step-title">Root Cause Identification</div>
+                    <div class="step-text">Using dark field microscopy, thermography, autonomic nervous system testing
+                        and bio-regulatory analysis to pinpoint the true origin of your health challenges.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div class="step-content">
+                    <div class="step-title">Personalized Treatment Plan</div>
+                    <div class="step-text">A customized protocol combining biological medicine, targeted therapies,
+                        nutrition, and lifestyle modifications tailored specifically to you.</div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">04</div>
+                <div class="step-content">
+                    <div class="step-title">Ongoing Vitality Management</div>
+                    <div class="step-text">Continuous monitoring and optimization of your Health Management Program to
+                        ensure lasting results and prevent age-related diseases.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DR MAI BIO -->
+    <section class="dr-bio">
+        <div class="bio-portrait reveal">
+            <div class="bio-portrait-text">M</div>
+            <div class="bio-tag">
+                <div class="bio-tag-name">Dr. Mai Al Shamsi</div>
+                <div class="bio-tag-role">Biological Medicine Practitioner</div>
+            </div>
+        </div>
+        <div class="bio-content reveal">
+            <div class="section-label">Meet the Doctor</div>
+            <h2 class="section-title">A Practitioner Who<br><em>Truly Listens</em></h2>
+            <p class="section-body">I am Dr. Mai Al Shamsi, a medical practitioner with a deep interest in Integrative
+                and Regenerative Medicine. Even though I studied orthodox medicine, my passion is to integrate mind,
+                body and soul.<br><br>I pursued Integrative and Biological Medicine as I realized that treating symptoms
+                is not the solution. Statistically, the UAE has become one of the highest-ranked countries for diabetes,
+                thyroid problems, heart disease, cancer, and obesity. I aim to raise awareness of prevention and to
+                improve patients' quality of life through trusted biological medicine techniques.<br><br>I am also
+                certified from the University of Arizona in Integrative Medicine, with a focus on anti-inflammatory
+                diet, nutrition and cancer — emphasizing the innate healing capacities of the organism.</p>
+            <div class="bio-certs">
+                <div class="cert-badge">University of Arizona — Integrative Medicine</div>
+                <div class="cert-badge">Quantum University</div>
+                <div class="cert-badge">Swiss Biological Medicine</div>
+                <div class="cert-badge">Regenerative Medicine</div>
+            </div>
+            <a href="tel:+97122222818" class="btn-primary">Book with Dr. Mai</a>
+        </div>
+    </section>
+
+    <!-- HOURS -->
+    <div class="hours-section reveal">
+        <h3 class="hours-title">Clinic<br><em
+                style="font-family:var(--font-display);font-style:italic;color:var(--sage-dark)">Opening Hours</em></h3>
+        <div class="hours-grid">
+            <div class="hour-item">
+                <div class="hour-day">Sat – Wed</div>
+                <div class="hour-time">10 AM – 6 PM</div>
+            </div>
+            <div class="hour-item">
+                <div class="hour-day">Thursday</div>
+                <div class="hour-time">11 AM – 4 PM</div>
+            </div>
+            <div class="hour-item closed">
+                <div class="hour-day">Friday</div>
+                <div class="hour-time">Closed</div>
+            </div>
+        </div>
+        <a href="tel:+97122222818" class="btn-primary" style="margin-left:auto;">📞 &nbsp;+971 2 222 2818</a>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-left reveal">
+            <div class="section-label">Reach Us</div>
+            <h2 class="section-title">Begin Your<br><em>Healing Journey</em></h2>
+            <p>We are here to assist you with your health and wellness inquiries. Reach out to schedule a consultation
+                or learn more about our programs.</p>
+            <div class="contact-info">
+                <div class="contact-row">
+                    <div class="contact-row-icon">📍</div>
+                    <div>
+                        <div class="contact-row-label">Address</div>
+                        <div class="contact-row-text">C29, Al Qurm Area, Khalifa Park<br>Building 60, 2nd Floor, Room
+                            201<br>Abu Dhabi, UAE — P.O. Box 61666</div>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-row-icon">📞</div>
+                    <div>
+                        <div class="contact-row-label">Phone</div>
+                        <div class="contact-row-text">+971 2 222 2818<br>+971 55 987 1491</div>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-row-icon">✉️</div>
+                    <div>
+                        <div class="contact-row-label">Email</div>
+                        <div class="contact-row-text">info@drmaicc.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form reveal">
+            <div class="form-title">Send Us a Message</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="Sara">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Ahmed">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="+971 XX XXX XXXX">
+            </div>
+            <div class="form-group">
+                <label>Service of Interest</label>
+                <select>
+                    <option value="">Select a service...</option>
+                    <option>Biological Dentistry</option>
+                    <option>CranioSacral Therapy</option>
+                    <option>Ozone Therapy</option>
+                    <option>Neurofeedback Therapy</option>
+                    <option>Detox Program</option>
+                    <option>Functional Medicine</option>
+                    <option>Dark Field Microscopy</option>
+                    <option>Thermography</option>
+                    <option>Magnetic Field Therapy</option>
+                    <option>Other / General Inquiry</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea placeholder="Tell us about your health goals or concerns..."></textarea>
+            </div>
+            <button class="form-submit" onclick="alert('Thank you! We will be in touch shortly.')">Send Message</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div class="brand">Dr. Mai Al Shamsi ICC</div>
+            <p class="tagline">Committed to proactive health, preventing age-related diseases and improving quality of
+                life through a balanced, holistic approach to well-aging.</p>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/DRMAICC/" class="social-btn" target="_blank">f</a>
+                <a href="https://www.instagram.com/drmai.icc/" class="social-btn" target="_blank">in</a>
+                <a href="https://linktr.ee/drmaiicc" class="social-btn" target="_blank">🌿</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#services">Biological Dentistry</a></li>
+                <li><a href="#services">Ozone Therapy</a></li>
+                <li><a href="#services">Neurofeedback</a></li>
+                <li><a href="#services">CranioSacral</a></li>
+                <li><a href="#services">Detox Programs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#philosophy">Our Approach</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.drmaicc.com/faqs" target="_blank">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="tel:+97122222818">+971 2 222 2818</a></li>
+                <li><a href="tel:+971559871491">+971 55 987 1491</a></li>
+                <li><a href="mailto:info@drmaicc.com">info@drmaicc.com</a></li>
+                <li><a href="#contact">Abu Dhabi, UAE</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Dr. Mai Al Shamsi Integrated Care Center. All rights reserved.</span>
+            <span>Abu Dhabi, UAE · P.O. Box 61666</span>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(r => observer.observe(r));
+
+        // Nav shrink on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.style.padding = window.scrollY > 60 ? '12px 60px' : '20px 60px';
+            if (window.innerWidth < 900) nav.style.padding = '12px 24px';
+        });
+    </script>
+</body>
+
+</html>
